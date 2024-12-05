@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: "Roboto", serif;
+}
+
+#map {
+    height: 30vh;
+}
+
+@media screen and (min-width: 992px) {
+    #map {
+        height: calc(100vh - 88px);
+    }
+}
+
+
+.main-title {
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 208, 252, 0.9416141456582633) 100%);
+    padding: 20px;
+    color: #fff;
+    margin: 0;
+}
+
+.pharmacy-list {
+    padding: 40px 0;
+    background-color: #fafafa;
+}
+
+.pharmacy-wrap {
+    height: calc(100% - 88px);
+    max-height: calc(100vh - 88px);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.pharmacy-wrap::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.select-item {
+    border-radius: 8px;
+    padding: 1rem;
+    top: 1px;
+    /*margin: 10px 16px;*/
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .2);
+    transition: background-color .3s;
+    cursor: pointer;
+    position: sticky;
+}
+.pharmacy-item {
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .2);
+    margin: 10px 16px;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+.pharmacy-item:hover,
+.pharmacy-item.active {
+    background: #f2f2f2;
+}
+
+.pharmacy-name {
+    font-weight: 600;
+}
+
+.pharmacy-phone {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    transition: color .3s;
+    width: fit-content;
+}
+
+.pharmacy-phone:hover {
+    color: #107ACBFF;
+}
+
+.city-select {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.city-select option {
+    cursor: pointer;
+}
