@@ -11,7 +11,7 @@ body {
 }
 
 #map {
-    height: 30vh;
+    height: 45vh;
 }
 
 @media screen and (min-width: 992px) {
@@ -19,7 +19,6 @@ body {
         height: calc(100vh - 88px);
     }
 }
-
 
 .main-title {
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 208, 252, 0.9416141456582633) 100%);
@@ -29,7 +28,7 @@ body {
 }
 
 .pharmacy-list {
-    padding: 40px 0;
+    padding: 25px 0;
     background-color: #fafafa;
 }
 
@@ -58,9 +57,10 @@ body {
     cursor: pointer;
     position: sticky;
 }
+
 .pharmacy-item {
     border-radius: 8px;
-    padding: 1rem;
+    padding: 10px 1rem;
     display: flex;
     background: #fff;
     flex-direction: column;
@@ -77,8 +77,11 @@ body {
 
 .pharmacy-name {
     font-weight: 600;
+    margin-bottom: 0;
 }
-
+.pharmacy-address {
+    margin-bottom: 10px;
+}
 .pharmacy-phone {
     color: #000;
     text-decoration: none;
