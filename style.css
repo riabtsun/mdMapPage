@@ -14,12 +14,6 @@ body {
     height: 45vh;
 }
 
-@media screen and (min-width: 992px) {
-    #map {
-        height: calc(100vh - 88px);
-    }
-}
-
 .main-title {
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 208, 252, 0.9416141456582633) 100%);
     padding: 20px;
@@ -30,6 +24,7 @@ body {
 .pharmacy-list {
     padding: 25px 0;
     background-color: #fafafa;
+    max-height: 35vh;
 }
 
 .pharmacy-wrap {
@@ -37,6 +32,7 @@ body {
     max-height: calc(100vh - 88px);
     overflow-y: scroll;
     -ms-overflow-style: none;
+    padding-bottom: 20px;
 }
 
 .pharmacy-wrap::-webkit-scrollbar {
@@ -77,6 +73,7 @@ body {
 
 .pharmacy-name {
     font-weight: 600;
+    font-size: 25px;
     margin-bottom: 0;
 }
 .pharmacy-address {
@@ -104,4 +101,15 @@ body {
 
 .city-select option {
     cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+    #map {
+        height: calc(100vh - 88px);
+    }
+    .pharmacy-list {
+        padding: 25px 0;
+        background-color: #fafafa;
+        max-height: calc(100vh - 88px);
+    }
 }
