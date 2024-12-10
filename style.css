@@ -10,10 +10,13 @@ body {
     font-family: "Roboto", serif;
 }
 
-#map {
+.map-wrap {
     height: 45vh;
 }
 
+#map {
+    height: calc(95% - 75px);
+}
 .main-title {
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 208, 252, 0.9416141456582633) 100%);
     padding: 20px;
@@ -22,13 +25,13 @@ body {
 }
 
 .pharmacy-list {
-    padding: 25px 0;
+    padding: 15px 0;
     background-color: #fafafa;
     max-height: 35vh;
 }
 
 .pharmacy-wrap {
-    height: calc(100% - 88px);
+    height: calc(55vh - 88px);
     max-height: calc(100vh - 88px);
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -43,15 +46,13 @@ body {
 .select-item {
     border-radius: 8px;
     padding: 1rem;
-    top: 1px;
-    /*margin: 10px 16px;*/
+    margin: 10px 0 0 0;
     display: flex;
     background: #fff;
     flex-direction: column;
     box-shadow: 0 1px 6px rgba(32, 33, 36, .2);
     transition: background-color .3s;
     cursor: pointer;
-    position: sticky;
 }
 
 .pharmacy-item {
@@ -68,7 +69,7 @@ body {
 
 .pharmacy-item:hover,
 .pharmacy-item.active {
-    background: #f2f2f2;
+    background: #0d8eff40;
 }
 
 .pharmacy-name {
@@ -105,11 +106,18 @@ body {
 
 @media screen and (min-width: 992px) {
     #map {
+        height: 100%;
+    }
+    .map-wrap {
         height: calc(100vh - 88px);
+    }
+    .pharmacy-wrap {
+        height: calc(100vh - 88px);
+        max-height: calc(100vh - 88px);
     }
     .pharmacy-list {
         padding: 25px 0;
         background-color: #fafafa;
-        max-height: calc(100vh - 88px);
+        height: 100%;
     }
 }
