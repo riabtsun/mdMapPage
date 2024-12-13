@@ -78,9 +78,10 @@ body {
     margin-bottom: 0;
 }
 .pharmacy-address {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
-.pharmacy-phone {
+.pharmacy-phone,
+.pharmacy-location {
     color: #000;
     text-decoration: none;
     display: flex;
@@ -88,9 +89,11 @@ body {
     align-items: center;
     transition: color .3s;
     width: fit-content;
+    margin-bottom: 2px;
 }
 
-.pharmacy-phone:hover {
+.pharmacy-phone:hover,
+.pharmacy-location:hover {
     color: #107ACBFF;
 }
 

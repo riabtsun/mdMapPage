@@ -60,15 +60,16 @@ markersData.forEach(data => {
   })
 })
 
-document.querySelectorAll('#pharmacy-list .pharmacy-item').forEach(item=>{
-  item.addEventListener('click', ()=>{
+document.querySelectorAll('#pharmacy-list .pharmacy-item').forEach(item => {
+  const locationLink = item.querySelector('.pharmacy-location')
+  locationLink.addEventListener('click', () => {
     const id = item.getAttribute('data-id')
-    if (markers[id]){
-      map.setView(markers[id].getLatLng(), 17);
-      markers[id].openPopup;
+    if (markers[id]) {
+      map.setView(markers[id].getLatLng(), 20);
+      markers[id].openPopup();
 
       //Підсвічування елементу списка
-      document.querySelectorAll('#pharmacy-list .pharmacy-item').forEach(li=>{
+      document.querySelectorAll('#pharmacy-list .pharmacy-item').forEach(li => {
         li.classList.remove('active')
       })
       item.classList.add('active')
@@ -79,18 +80,18 @@ document.querySelectorAll('#pharmacy-list .pharmacy-item').forEach(item=>{
 
 const citySelect = document.querySelector('.select-item');
 const pharmacyWrap = document.querySelector('.pharmacy-wrap');
-const mapWrap = document.querySelector('.map-wrap')
+const mapWrap = document.querySelector('.map-wrap');
 
-if (window.innerWidth > 992){
+if (window.innerWidth > 992) {
   pharmacyWrap.prepend(citySelect)
-}else {
+} else {
   mapWrap.append(citySelect)
 }
 
-window.addEventListener('resize',event=>{
-  if(event.target.innerWidth > 992){
+window.addEventListener('resize', event => {
+  if (event.target.innerWidth > 992) {
     pharmacyWrap.prepend(citySelect)
-  }else {
+  } else {
     mapWrap.append(citySelect)
   }
 })
