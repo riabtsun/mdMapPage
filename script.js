@@ -82,8 +82,6 @@ const citySelect = document.querySelector('.select-item');
 const pharmacyWrap = document.querySelector('.pharmacy-wrap');
 const mapWrap = document.querySelector('.map-wrap');
 
-$(".chosen-select").chosen()
-
 if (window.innerWidth > 992) {
   pharmacyWrap.prepend(citySelect)
 } else {
@@ -97,3 +95,23 @@ window.addEventListener('resize', event => {
     mapWrap.append(citySelect)
   }
 })
+
+$(document).ready(function () {
+  // Инициализация Chosen
+  $(".chosen-select").chosen({width: "100%"})
+
+  // Добавление атрибутов data-region в элементы li
+  $('#citySelect').on('chosen:showing_dropdown', function () {
+    const $select = $(this); // Исходный select
+    const $chosen = $select.next('.chosen-container'); // Список ul от Chosen
+
+    // Итерируем по option и связываем их с li
+    $select.find('option').each(function (index, option) {
+      const region = $(option).data('region'); // Получаем атрибут data-region
+      if (region) {
+        const $li = $chosen.find('.chosen-results li').eq(index); // Соответствующий li
+        $li.attr('data-region', region); // Добавляем data-region к li
+      }
+    });
+  });
+});
