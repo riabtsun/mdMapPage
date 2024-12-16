@@ -82,6 +82,8 @@ const citySelect = document.querySelector('.select-item');
 const pharmacyWrap = document.querySelector('.pharmacy-wrap');
 const mapWrap = document.querySelector('.map-wrap');
 
+$(".chosen-select").chosen()
+
 if (window.innerWidth > 992) {
   pharmacyWrap.prepend(citySelect)
 } else {

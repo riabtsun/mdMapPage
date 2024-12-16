@@ -1,0 +1,22 @@
+{
+  "name": "medicardmappage",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riabtsun/mdMapPage.git"
+  },
+  "author": "Dmytro Riabtsun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riabtsun/mdMapPage/issues"
+  },
+  "homepage": "https://github.com/riabtsun/mdMapPage#readme",
+  "description": "",
+  "dependencies": {
+    "chosen-js": "^1.8.7"
+  }
+}
