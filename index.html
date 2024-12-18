@@ -17,7 +17,9 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossorigin=""></script>
-  <link rel="stylesheet" href="node_modules/chosen-js/chosen.css">
+  <link rel="stylesheet" href="https://unpkg.com/slim-select@latest/dist/slimselect.css" />
+
+
   <link rel="stylesheet" href="style.css">
   <title>Magic card</title>
 </head>
@@ -135,7 +137,6 @@
           <select class="chosen-select city-select" name="citySelect" id="citySelect"
                   data-placeholder="Оберіть місто" data-no_results_text="Місто не знайдено" tabindex="2"
           >
-            <option value="11" data-region="Область з БД"></option>
             <option value="12" data-region="Область з БД">Київ</option>
             <option value="13" data-region="Область з БД">Дніпро</option>
             <option value="14" data-region="Область з БД">Черкаси</option>
@@ -146,13 +147,12 @@
     </div>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+<script type="module"  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+<script type="module"  src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="node_modules/chosen-js/chosen.jquery.js"></script>
-<script src="node_modules/chosen-js/chosen.proto.js"></script>
-<script src="script.js"></script>
+<script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+<script type="module"  src="script.js"></script>
 </body>
 </html>

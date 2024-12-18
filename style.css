@@ -111,10 +111,11 @@ ul.chosen-results li {
     position: relative;
 }
 
-ul.chosen-results li::before {
+.ss-option::before {
     content: attr(data-region);
     position: absolute;
-    right: 10px;
+    right: 20px;
+    font-size: .8rem;
 }
 
 @media screen and (min-width: 992px) {

@@ -96,22 +96,26 @@ window.addEventListener('resize', event => {
   }
 })
 
-$(document).ready(function () {
-  // Инициализация Chosen
-  $(".chosen-select").chosen({width: "100%"})
+new SlimSelect({
+  select: '#citySelect',
+  events: {
+    beforeOpen: () => {
+      const select = document.querySelector('#citySelect')
+      const options = select.options
+      console.log(options)
+      const slimOptions = document.querySelectorAll('.ss-option')
 
-  // Добавление атрибутов data-region в элементы li
-  $('#citySelect').on('chosen:showing_dropdown', function () {
-    const $select = $(this); // Исходный select
-    const $chosen = $select.next('.chosen-container'); // Список ul от Chosen
+      slimOptions.forEach((slimOption,index)=>{
+        const dataRegion = options[index].getAttribute('data-region')
+        if(dataRegion)  slimOption.setAttribute('data-region', dataRegion)
+      })
+    },
+  },
+  settings: {
+    searchPlaceholder: 'Оберіть місто',
+    searchText: 'Нічого не знайдено',
+    searchingText: 'Шукаємо...',
+    placeholderText: 'Обране значення',
+  }
+})
 
-    // Итерируем по option и связываем их с li
-    $select.find('option').each(function (index, option) {
-      const region = $(option).data('region'); // Получаем атрибут data-region
-      if (region) {
-        const $li = $chosen.find('.chosen-results li').eq(index); // Соответствующий li
-        $li.attr('data-region', region); // Добавляем data-region к li
-      }
-    });
-  });
-});
