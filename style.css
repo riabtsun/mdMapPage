@@ -33,7 +33,7 @@ body {
 }
 
 .pharmacy-wrap {
-    height: calc(55vh - 88px);
+    height: calc(54vh - 88px);
     max-height: calc(100vh - 88px);
     overflow-y: scroll;
     -ms-overflow-style: none;

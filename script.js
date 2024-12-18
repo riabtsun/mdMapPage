@@ -116,6 +116,7 @@ new SlimSelect({
     searchText: 'Нічого не знайдено',
     searchingText: 'Шукаємо...',
     placeholderText: 'Обране значення',
+    focusSearch: false
   }
 })
 
